@@ -802,7 +802,7 @@ class SigninView(View):
 
             if user:
                 if user.is_active:
-                    auth.signin(request, user)
+                    auth.login(request, user)
                     return redirect('home')
                 messages.error(
                     request, 'Account is not active, please check your email')
